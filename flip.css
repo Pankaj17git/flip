@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif ;
+}
+
+
+section{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #121321;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+section::before{
+  content: "";
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  transform: translate(-150px , -100px);
+  background: linear-gradient(90deg,#9c27b0, #f3f5f5);
+}
+
+section::after{
+  content: "";
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  transform: translate(150px , 100px);
+  background: linear-gradient(90deg,#9c27b0, #f3f5f5);
+}
+
+.container{
+  position: relative;
+  height: 245px;
+  width: 400px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column ;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.container:hover{
+transform: rotateY(180deg);
+}
+
+.container .card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(37 37 37 / 10%);
+  border-radius: 25px;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.logo-name{
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 15px 0px;
+}
+
+.logo-name .chip{
+  padding: 10px 0 0 60px;
+  height: 85px;
+}
+
+
+.card .logo{
+  height: 70px;
+  margin-top: 15px;
+  padding-left: 25px;
+
+}
+
+.logo-name .card-name{
+  color:  white;
+  padding: 20px 0 0 15px;
+  font-size: 20px;
+  font-weight: 400;
+  width: 150px;
+  height: 50px;
+}
+
+.card .card-number{
+  display: flex;
+    width: 295px;
+    flex-direction: column;
+    color: white;
+    height: 120px;
+    padding-left: 25px;
+
+}
+
+
+.card-number p{
+  display: inline;
+}
+
+.card-number .number-text{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.card-number .number{
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+
+.card .date{
+  position: absolute;
+  top: 175px;
+  left: 330px;
+  height: 55px;
+  width: 65px ;
+  color: white;
+}
+.card.back-face{
+  border: none;
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+ 
+.customer{
+  width:100%;
+  height: 15%;
+  color: white;
+  text-align: start;
+  padding-top: 15px;
+  padding-right: 5px;
+}
+
+.customer h1{
+  font-size: 9.3px;
+  padding-left: 25px;
+}
+
+.black{
+  width:100%;
+  height: 20%;
+  background-color: black;
+  margin-bottom: 20px;
+}
+
+.cvv{
+  width:100%;
+  height: 20%;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+
+.cvv .cvv-number{
+  display: grid;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 90%;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: -2px;
+  font-size: 15px;
+}
+
+.cvv .space{
+  width:75%;
+  height: 100%;
+  background: repeating-linear-gradient( 180deg, #FFFFFF, #FFFFFF 6px, #e3e3e3 7px, #e3e3e3 11px );
+  border-radius: 5px;
+}
+
+.text{
+
+  font-size:10px; 
+  color: white;
+  padding-left: 25px;
+  padding-right: 25px;
+}
